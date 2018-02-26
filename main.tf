@@ -4,10 +4,6 @@ resource "google_dataproc_cluster" "mycluster" {
     name    = "${var.cluster_name}"
     project = "${var.project_id}"
 
-    #TODO    
-    #labels {
-    #    foo = "bar"
-    #}
     labels  = "${var.labels}"
 
     cluster_config {
