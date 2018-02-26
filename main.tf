@@ -3,7 +3,6 @@ data "google_compute_zones" "available" {}
 resource "google_dataproc_cluster" "mycluster" {
     name    = "${var.cluster_name}"
     project = "${var.project_id}"
-    region  = "${var.region_name}"
 
     #TODO    
     #labels {

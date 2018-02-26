@@ -8,7 +8,6 @@ variable "project_id" {
 
 variable "region_name" {
     description = "The region in which the cluster and associated nodes will be created in"
-    default = "global"
 }
 
 variable "delete_autogen_bucket" {
