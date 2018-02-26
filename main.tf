@@ -1,3 +1,5 @@
+data "google_compute_zones" "available" {}
+
 resource "google_dataproc_cluster" "mycluster" {
     name    = "${var.cluster_name}"
     project = "${var.project_id}"
@@ -44,6 +46,7 @@ resource "google_dataproc_cluster" "mycluster" {
         }
 
         gce_cluster_config {
+            zone    = "${data.google_compute_zones.available.names[0]}"
             #network = "${google_compute_network.dataproc_network.name}"
             
             #TODO

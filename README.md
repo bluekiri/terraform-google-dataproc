@@ -9,7 +9,7 @@ module "my-dataproc" {
   settings = {
     cluster_name = "my-cluster"
     project_id = "my-project-1234"
-    
+    region_name = "us-central1"
   }
 }
 ```
