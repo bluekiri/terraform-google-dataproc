@@ -21,7 +21,7 @@ variable "master_num_instances" {
     default     = 1
 }
 
-variable "master_num_instances" {
+variable "master_machine_type" {
     description = "The name of a Google Compute Engine machine type to create for the master"
     default     = "n1-standard-4"
 }
@@ -36,7 +36,7 @@ variable "worker_num_instances" {
     default     = 2
 }
 
-variable "worker_num_instances" {
+variable "worker_machine_type" {
     description = "The name of a Google Compute Engine machine type to create for the worker nodes"
     default     = "n1-standard-4"
 }
