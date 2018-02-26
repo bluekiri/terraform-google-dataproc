@@ -10,6 +10,11 @@ variable "region_name" {
     description = "The region in which the cluster and associated nodes will be created in"
 }
 
+variable "labels" {
+    description = "The list of labels (key/value pairs) to be applied to instances in the cluster"
+    default     = {}
+}
+
 variable "delete_autogen_bucket" {
     description = "If this is set to true, upon destroying the cluster, if no explicit staging_bucket was specified (i.e. an auto generated bucket was relied upon) then this auto generated bucket will also be deleted as part of the cluster destroy"
     default     = "false"

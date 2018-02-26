@@ -8,6 +8,7 @@ resource "google_dataproc_cluster" "mycluster" {
     #labels {
     #    foo = "bar"
     #}
+    labels  = "${var.labels}"
 
     cluster_config {
         delete_autogen_bucket = "${var.delete_autogen_bucket}"
