@@ -9,7 +9,7 @@ resource "google_dataproc_cluster" "mycluster" {
     #}
 
     cluster_config {
-        delete_autogen_bucket = ${var.delete_autogen_bucket}
+        delete_autogen_bucket = "${var.delete_autogen_bucket}"
         #TODO - default to ""?
         #staging_bucket        = "dataproc-staging-bucket"
 
