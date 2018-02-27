@@ -3,13 +3,14 @@ data "google_compute_zones" "available" {}
 resource "google_dataproc_cluster" "this" {
     name    = "${var.cluster_name}"
     project = "${var.project_id}"
+    region  = "${var.region_name}"
 
     labels  = "${var.labels}"
 
     cluster_config {
         delete_autogen_bucket = "${var.delete_autogen_bucket}"
-        #TODO - default to ""?
-        #staging_bucket        = "dataproc-staging-bucket"
+        #TODO - staging_bucket
+        staging_bucket        = "${var.staging_bucket}"
 
         master_config {
             num_instances     = "${var.master_num_instances}"
