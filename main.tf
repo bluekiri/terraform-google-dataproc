@@ -1,6 +1,6 @@
 data "google_compute_zones" "available" {}
 
-resource "google_dataproc_cluster" "mycluster" {
+resource "google_dataproc_cluster" "this" {
     name    = "${var.cluster_name}"
     project = "${var.project_id}"
 
