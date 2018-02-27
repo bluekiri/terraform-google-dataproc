@@ -20,6 +20,11 @@ variable "delete_autogen_bucket" {
     default     = "false"
 }
 
+variable "staging_bucket" {
+    description = "The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster"
+    default =   ""
+}
+
 variable "master_num_instances" {
     description = "Specifies the number of master nodes to create"
     default     = 1
